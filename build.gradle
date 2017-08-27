@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'kotlin'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    compile 'org.jsoup:jsoup:1.10.3'
+    compile 'org.litote.kmongo:kmongo:3.4.1'
+}
+
+buildscript {
+    ext.kotlin_version = '1.1.4-2'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
